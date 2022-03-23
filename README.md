@@ -15,7 +15,8 @@
 ## Info
 </a>  
 
-> The software is designed to generate a Log from File  
+> The Software is designed to generate a messages from File  
+> and to send them to external Syslog server
 > It uses Log example file,
 > read random message from this file and generate new one
 
