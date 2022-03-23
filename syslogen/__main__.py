@@ -1,4 +1,5 @@
 """
+    SYSLOGEN
     Simple Log Generator
     Copyright (C) 2021 Bengart Zakhar
 
@@ -21,7 +22,6 @@
         Bengart Zakhar
 """
 
-#!/opt/ziem/venv/bin/python
 import os
 import sys
 import argparse

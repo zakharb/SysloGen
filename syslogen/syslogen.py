@@ -1,4 +1,5 @@
 """
+    SYSLOGEN
     Simple Log Generator
     Copyright (C) 2021 Bengart Zakhar
 
