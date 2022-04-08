@@ -17,7 +17,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
     Description:
-        Main module for ZLOG
+        Main module for SYSLOGEN
 
     Author:
         Bengart Zakhar

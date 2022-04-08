@@ -28,7 +28,7 @@
 - download `.whl` file
 - install via `pip`
 ```sh
-pip install zgenerator-xxx.whl
+pip install syslogen-xxx.whl
 ```
 
 <a name="usage"/>
