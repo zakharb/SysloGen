@@ -25,9 +25,8 @@
 import os
 import sys
 import argparse
-import pkg_resources
 
-from syslogen.syslogen import main
+from syslogen import Syslogen
 
 def showlicense():
     license = ('Simple Syslog Generator\n'
@@ -45,12 +44,11 @@ def showlicense():
     print(license)
 
 if __name__ == "__main__":
-    version = pkg_resources.get_distribution('syslogen').version
-    print('Syslogen {} Simple Syslog Generator\n'
+    print('Syslogen Simple Syslog Generator\n'
           'Copyright (C) 2021 Bengart Zakhar\n'
           'This program comes with ABSOLUTELY NO WARRANTY\n'
           'This is free software, and you are welcome to redistribute it\n'
-          'under certain conditions; type `--license` for details.\n'.format(version))
+          'under certain conditions; type `--license` for details.\n')
     print('   _______  _______ __    ____  _____________   __\n'\
           '  / ___/\ \/ / ___// /   / __ \/ ____/ ____/ | / /\n'\
           '  \__ \  \  /\__ \/ /   / / / / / __/ __/ /  |/ / \n'\
@@ -58,20 +56,31 @@ if __name__ == "__main__":
           '/____/  /_//____/_____/\____/\____/_____/_/ |_/   \n')
     parser = argparse.ArgumentParser(
         prog='syslogen', 
-        usage='%(prog)s [options] -i input_file -c count')
+        usage='%(prog)s [options]')
+    parser.add_argument(
+        "server_ip", 
+        type=str, 
+        help="IP address of Syslog server where to send messages")
+    parser.add_argument(
+        "-p", 
+        "--port",
+        type=int, 
+        help="Port of Syslog server")
     parser.add_argument(
         "-i", 
         "--input",
-        help="File used to generate messages",
-        action="store_true")
+        type=str, 
+        help="File used to generate messages")
     parser.add_argument(
         "-c", 
-        "--count", 
-        help="Number of generated messages per second",
-        action="store_true")
+        "--count",
+        type=int, 
+        help="Number of generated messages per second")
     args = parser.parse_args()
     if args.input and args.count:
-        main(args.input, args.count)
+        port = args.port if args.port else 514
+        syslogen = Syslogen(args.server_ip, port, args.input, args.count)
+        syslogen.start()
     else:
         print("Not enough arguments, '--help' for more info")
         sys.exit(1)
