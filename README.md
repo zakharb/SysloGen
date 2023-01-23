@@ -1,56 +1,74 @@
-![logo](logo.png)
+<p align="center">
+  <img src="logo.png" alt="animated" />
+</p>
 
-## _Simple Log Generator_ 
+<p align="center">
+  The simplest syslog generator.
+</p>
 
-![](https://img.shields.io/badge/version-1.0-blue)
-![](https://img.shields.io/badge/python-3.9-blue)
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.1-blue" height="20"/>
+  <img src="https://img.shields.io/badge/python-3.11-blue" height="20"/>
+</p>
 
-## Content  
-[Info](#info)  
-[Install](#install)  
-[Usage](#usage)  
+<p align="center">
+  <img src="usage.gif" alt="animated" />
+</p>
 
-<a name="info"/>
 
-## Info
-</a>  
+## Getting Started
 
-> Syslogen generate a messages from file and  
-> send them to external Syslog server  
+[Syslogen](https://github.com/zakharb/syslogen) generates messages from file and send them to external Syslog server.  
 
-<a name="info"/>
+### Prerequisites
 
-## Install
-</a>  
+No additional libraries are required.
 
-- download `.whl` file
-- install via `pip`
-```sh
-pip install syslogen-xxx.whl
+### Installing
+
+Git clone project, install package via `pip`
 ```
-
-<a name="usage"/>
+git clone git@github.com:zakharb/syslogen.git
+python3 -m pip install dist/syslogen-*.whl
+```
+<p align="center">
+  <img src="install.gif" alt="animated" />
+</p>
 
 ## Usage
-</a>  
 
-```sh
-Syslogen 1.0 Simple Syslog Generator
-Copyright (C) 2021 Bengart Zakhar
-This program comes with ABSOLUTELY NO WARRANTY
-This is free software, and you are welcome to redistribute it
-under certain conditions; type `--license` for details.
+Choose server and port  
+Set sending speed  
+Specify file with logs examples  
 
-   _______  _______ __    ____  _____________   __
-  / ___/\ \/ / ___// /   / __ \/ ____/ ____/ | / /
-  \__ \  \  /\__ \/ /   / / / / / __/ __/ /  |/ / 
- ___/ /  / /___/ / /___/ /_/ / /_/ / /___/ /|  /  
-/____/  /_//____/_____/\____/\____/_____/_/ |_/   
+### Examples
 
-usage: syslogen [options] -i input_file -c count
+Start with 2 msg/sec and standart port
 
-optional arguments:
-  -h, --help   show this help message and exit
-  -i, --input  File used to generate messages
-  -c, --count  Number of generated messages per second
 ```
+python3 -m syslogen 192.168.1.1 -i examples_messages.txt -c 2
+```
+
+Start with 4 msg/sec and port 5514
+```
+python3 -m syslogen 192.168.1.1 -p 5514 -i examples_messages.txt -c 4
+```
+
+## Deployment
+
+Use virtual environment `venv` for isolating code
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/zakharb/syslogen/tags). 
+
+## Authors
+
+* **Zakhar Bengart** - *Initial work* - [Ze](https://github.com/zakharb)
+
+See also the list of [contributors](https://github.com/zakharb/contributors) who participated in this project.
+
+## License
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation - see the [LICENSE](LICENSE) file for details
+

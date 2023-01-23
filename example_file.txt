@@ -1,0 +1,5 @@
+00:00:46: %LINK-3-UPDOWN: Interface Port-channel1, changed state to up
+00:00:47: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to up
+00:00:47: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed state to up
+00:00:48: %LINEPROTO-5-UPDOWN: Line protocol Vlan1, changed state to down
+18:47:02: %SYS-5-CONFIG_I: Configured from console by vty2 (10.34.195.36)
