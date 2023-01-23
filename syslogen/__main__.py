@@ -26,7 +26,7 @@ import os
 import sys
 import argparse
 
-from syslogen import Syslogen
+from syslogen.syslogen import Syslogen
 
 def showlicense():
     license = ('Simple Syslog Generator\n'
