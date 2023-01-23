@@ -25,36 +25,42 @@
 
 import os
 import random
-
+import socket
+import datetime
 from time import sleep
-from datetime import datetime
-from datetime import timedelta 
 
 class Syslogen():
-    def __init__(self, output_file, input_file, count):
-        self.output_file = output_file
+    """
+    Main class for Syslogen
+    Read lines from file example
+    Use random line and send it to server
+    Generate count per 1 second messages
+    """
+    def __init__(self, server_ip, port, input_file, count):
+        self.server_ip = server_ip
+        self.port = port
         self.input_file = input_file
         self.count = count
 
-    def append_file(self):
+    def start(self):
+        """
+        Create sockets
+        Read file and send to server
+        """
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         with open(self.input_file, 'r') as f:
             lines = f.readlines()
-        t1 = datetime.now()
+        t1 = datetime.datetime.now()
         send_mes = 0
         sum_mes = 0
         while True:
             message = lines[random.randrange(0, len(lines) - 1)]
-            with open(self.output_file, 'a+') as f:
-                f.write(message)
-            t2 = datetime.now()
-            if t2 - t1 > timedelta(seconds=1):
+            sock.sendto(message.encode('utf-8'), (self.server_ip, self.port))
+            t2 = datetime.datetime.now()
+            if t2 - t1 > datetime.timedelta(seconds=1):
                 sum_mes += send_mes
-                print('{} Messages writen: {}, total {}'.format(t2, send_mes, sum_mes))
-                t1 = datetime.now()
+                print(f'{t2} Messages writen: {send_mes}, total {sum_mes}')
+                t1 = datetime.datetime.now()
                 send_mes = 0
             send_mes += 1
             sleep(1/self.count)
-
-def main(output_file, input_file, count):
-    generator = Syslogen(output_file, input_file, count)
-    generator.append_file()
