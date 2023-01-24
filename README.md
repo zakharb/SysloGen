@@ -22,7 +22,7 @@
 
 ### Prerequisites
 
-No additional libraries are required.
+Only Python3, no additional libraries are required.
 
 ### Installing
 
