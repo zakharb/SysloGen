@@ -57,8 +57,17 @@ python3 -m syslogen 192.168.1.1 -p 5514 -i examples_messages.txt -c 4
 
 ## Deployment
 
-Use virtual environment [venv](https://docs.python.org/3/library/venv.html) for isolating code  
+Edit Dockerfile and spicify server IP address
 
+Build image
+```
+docker build --network host -t syslogen .
+```
+
+Run image
+```
+docker run syslogen
+```
 ## Versioning
 
 Using [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/zakharb/syslogen/tags). 
