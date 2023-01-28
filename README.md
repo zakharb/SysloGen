@@ -26,9 +26,13 @@ Only Python3, no additional libraries are required.
 
 ### Installing
 
-Git clone project, install package via `pip`
+Git clone project
 ```
 git clone git@github.com:zakharb/syslogen.git
+```
+
+Install package via `pip`
+```
 python3 -m pip install dist/syslogen-*.whl
 ```
 <p align="center">
