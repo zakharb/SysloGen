@@ -18,7 +18,7 @@
 
 ## Getting Started
 
-[Syslogen](https://github.com/zakharb/syslogen) generates messages from file and send them to external Syslog server.  
+[Syslogen](https://github.com/zakharb/syslogen) is the simple Syslog generator that creates messages from file and send them to external Syslog server.  
 
 ### Prerequisites
 
@@ -37,9 +37,10 @@ python3 -m pip install dist/syslogen-*.whl
 
 ## Usage
 
-Choose server and port  
-Set sending speed  
-Specify file with logs examples  
+All parameters send via arguments. 
+- set server and port  
+- set sending speed  
+- set file with logs examples  
 
 ### Examples
 
@@ -56,11 +57,11 @@ python3 -m syslogen 192.168.1.1 -p 5514 -i examples_messages.txt -c 4
 
 ## Deployment
 
-Use virtual environment `venv` for isolating code
+Use virtual environment [venv](https://docs.python.org/3/library/venv.html) for isolating code  
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/zakharb/syslogen/tags). 
+Using [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/zakharb/syslogen/tags). 
 
 ## Authors
 

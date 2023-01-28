@@ -21,12 +21,10 @@
     Author:
         Bengart Zakhar
 """
-
 import os
-import sys
-import argparse
 
-from syslogen.syslogen import Syslogen
+import argparse
+from syslogen.core import Syslogen
 
 def showlicense():
     license = ('Simple Syslog Generator\n'
@@ -83,4 +81,3 @@ if __name__ == "__main__":
         syslogen.start()
     else:
         print("Not enough arguments, '--help' for more info")
-        sys.exit(1)
