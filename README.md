@@ -3,7 +3,11 @@
 </p>
 
 <p align="center">
-  The simplest syslog generator.
+
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&pause=1000&color=0A7AFF&width=435&lines=+The+simplest+syslog+generator." alt="Typing SVG" />
+  </a>
+
 </p>
 
 <p align="center">
@@ -20,9 +24,9 @@
 
 [Syslogen](https://github.com/zakharb/syslogen) is the simple Syslog generator that creates messages from file and send them to external Syslog server.  
 
-### Prerequisites
+### Requirements
 
-Only Python3, no additional libraries are required.
+Only ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54), no additional libraries are required.
 
 ### Installing
 
