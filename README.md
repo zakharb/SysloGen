@@ -26,7 +26,8 @@
 
 ### Requirements
 
-Only ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54), no additional libraries are required.
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)  
+Only Python3, no additional libraries are required.
 
 ### Installing
 
@@ -46,9 +47,10 @@ python3 -m pip install dist/syslogen-*.whl
 ## Usage
 
 All parameters send via arguments. 
-- set server and port  
-- set sending speed  
-- set file with logs examples  
+- set syslog server where to send logs
+- change server port (optional) `--port` 
+- set sending messages per second `--count`
+- set input file with logs examples `--input`  
 
 ### Examples
 
