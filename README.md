@@ -80,7 +80,7 @@ Using [SemVer](http://semver.org/) for versioning. For the versions available, s
 
 * **Zakhar Bengart** - *Initial work* - [Ze](https://github.com/zakharb)
 
-See also the list of [contributors](https://github.com/zakharb/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/zakharb/syslogen/contributors) who participated in this project.
 
 ## License
 
