@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" alt="animated" />
+  <img src="https://user-images.githubusercontent.com/101948294/216656237-a8f4f931-c9da-496e-9c65-b28c5b34caa4.png" alt="animated" />
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <img src="usage.gif" alt="animated" />
+  <img src="https://user-images.githubusercontent.com/101948294/216656246-f32e5d5d-8346-417e-a651-c5f945a1172b.gif" alt="animated" />
 </p>
 
 
@@ -31,18 +31,10 @@ Only Python3, no additional libraries are required.
 
 ### Installing
 
-Git clone project
+Install via `pip`
 ```
-git clone git@github.com:zakharb/syslogen.git
+pip install syslogen
 ```
-
-Install package via `pip`
-```
-python3 -m pip install dist/syslogen-*.whl
-```
-<p align="center">
-  <img src="install.gif" alt="animated" />
-</p>
 
 ## Usage
 
