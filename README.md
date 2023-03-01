@@ -20,7 +20,7 @@
 </p>
 
 
-## Getting Started
+## :blue_square: Getting Started
 
 [Syslogen](https://github.com/zakharb/syslogen) is the simple Syslog generator that creates messages from file and send them to external Syslog server.  
 
@@ -36,7 +36,7 @@ Install via `pip`
 pip install syslogen
 ```
 
-## Usage
+## :blue_square: Usage
 
 All parameters send via arguments. 
 - set syslog server where to send logs
@@ -57,7 +57,7 @@ Start with 4 msg/sec and port 5514
 python3 -m syslogen 192.168.1.1 -p 5514 -i examples_messages.txt -c 4
 ```
 
-## Deployment
+## :blue_square: Deployment
 
 Edit Dockerfile and spicify server IP address
 
@@ -70,17 +70,17 @@ Run image
 ```
 docker run syslogen
 ```
-## Versioning
+## :blue_square: Versioning
 
 Using [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/zakharb/syslogen/tags). 
 
-## Authors
+## :blue_square: Authors
 
 * **Zakhar Bengart** - *Initial work* - [Ze](https://github.com/zakharb)
 
 See also the list of [contributors](https://github.com/zakharb/syslogen/contributors) who participated in this project.
 
-## License
+## :blue_square: License
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation - see the [LICENSE](LICENSE) file for details
 
