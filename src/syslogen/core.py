@@ -50,17 +50,10 @@ class Syslogen():
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         with open(self.input_file, 'r') as f:
             lines = f.readlines()
-        t1 = datetime.datetime.now()
-        send_mes = 0
-        sum_mes = 0
         while True:
             message = lines[random.randrange(0, len(lines) - 1)]
-            sock.sendto(message.encode('utf-8'), (self.server_ip, self.port))
-            t2 = datetime.datetime.now()
-            if t2 - t1 > datetime.timedelta(seconds=1):
-                sum_mes += send_mes
-                print(f'{t2} Messages writen: {send_mes}, total {sum_mes}')
-                t1 = datetime.datetime.now()
-                send_mes = 0
-            send_mes += 1
+            timestamp = datetime.datetime.now().strftime("%b %d %H:%M:%S")
+            hostname = socket.gethostname()
+            syslog_msg = f"<14>{timestamp} {hostname} {message}"
+            sock.sendto(syslog_msg.encode('utf-8'), (self.server_ip, self.port))
             sleep(1/self.count)

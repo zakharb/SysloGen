@@ -41,7 +41,7 @@ def showlicense():
                'along with this program.  If not, see <https://www.gnu.org/licenses/>.')
     print(license)
 
-if __name__ == "__main__":
+def main():
     print('Syslogen Simple Syslog Generator\n'
           'Copyright (C) 2021 Bengart Zakhar\n'
           'This program comes with ABSOLUTELY NO WARRANTY\n'
@@ -81,3 +81,6 @@ if __name__ == "__main__":
         syslogen.start()
     else:
         print("Not enough arguments, '--help' for more info")
+
+if __name__ == "__main__":
+    main()

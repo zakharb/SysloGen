@@ -1,9 +1,13 @@
 <p align="center">
-  <img src="logo.png" alt="animated" />
+  <img src="https://user-images.githubusercontent.com/101948294/216656237-a8f4f931-c9da-496e-9c65-b28c5b34caa4.png" alt="animated" />
 </p>
 
 <p align="center">
-  The simplest syslog generator.
+
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&pause=1000&color=0A7AFF&center=true&width=435&lines=+The+simplest+syslog+generator." alt="Typing SVG" />
+  </a>
+
 </p>
 
 <p align="center">
@@ -12,39 +16,33 @@
 </p>
 
 <p align="center">
-  <img src="usage.gif" alt="animated" />
+  <img src="https://user-images.githubusercontent.com/101948294/216656246-f32e5d5d-8346-417e-a651-c5f945a1172b.gif" alt="animated" />
 </p>
 
 
-## Getting Started
+## :blue_square: Getting Started
 
 [Syslogen](https://github.com/zakharb/syslogen) is the simple Syslog generator that creates messages from file and send them to external Syslog server.  
 
-### Prerequisites
+### Requirements
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)  
 Only Python3, no additional libraries are required.
 
 ### Installing
 
-Git clone project
+Install via `pip`
 ```
-git clone git@github.com:zakharb/syslogen.git
+pip install syslogen
 ```
 
-Install package via `pip`
-```
-python3 -m pip install dist/syslogen-*.whl
-```
-<p align="center">
-  <img src="install.gif" alt="animated" />
-</p>
-
-## Usage
+## :blue_square: Usage
 
 All parameters send via arguments. 
-- set server and port  
-- set sending speed  
-- set file with logs examples  
+- set syslog server where to send logs
+- change server port (optional) `--port` 
+- set sending messages per second `--count`
+- set input file with logs examples `--input`  
 
 ### Examples
 
@@ -59,7 +57,7 @@ Start with 4 msg/sec and port 5514
 python3 -m syslogen 192.168.1.1 -p 5514 -i examples_messages.txt -c 4
 ```
 
-## Deployment
+## :blue_square: Deployment
 
 Edit Dockerfile and spicify server IP address
 
@@ -72,17 +70,17 @@ Run image
 ```
 docker run syslogen
 ```
-## Versioning
+## :blue_square: Versioning
 
 Using [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/zakharb/syslogen/tags). 
 
-## Authors
+## :blue_square: Authors
 
 * **Zakhar Bengart** - *Initial work* - [Ze](https://github.com/zakharb)
 
-See also the list of [contributors](https://github.com/zakharb/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/zakharb/syslogen/contributors) who participated in this project.
 
-## License
+## :blue_square: License
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation - see the [LICENSE](LICENSE) file for details
 
